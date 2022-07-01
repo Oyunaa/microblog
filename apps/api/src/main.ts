@@ -5,10 +5,17 @@
 
 import * as express from 'express';
 import { AuthRoutes } from './app/routes/Auth';
+import { PostRoutes } from './app/routes/Post';
+import { connectToDatabase } from './database';
 
 const app = express();
 
+connectToDatabase()
+  .then(() => console.log('DB success'))
+  .catch((e) => console.log(e));
+
 app.use(AuthRoutes);
+app.use('post', PostRoutes);
 
 app.get('/api', (req, res) => {
   res.send({ message: 'Welcome to api!' });
