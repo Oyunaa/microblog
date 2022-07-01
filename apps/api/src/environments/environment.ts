@@ -4,4 +4,5 @@ export const environment = {
   appUrl: 'http://localhost:4200/',
   clientSecret: '3b974a5cad811a542505a740bddaef8fd70d6073',
   appSecret: 'wMX4QtbNuJWygKrXZqXp4y6wyrRPsxo3w0cXyqghHnc=',
+  connectionString: ''
 };
