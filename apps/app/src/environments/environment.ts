@@ -3,6 +3,6 @@
 
 export const environment = {
   production: false,
-  clientId: '086b269411f894b6be71',
+  clientId: '5a9a0999b877481f6e49',
   apiUrl: 'http://localhost:3333',
 };

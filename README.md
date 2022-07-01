@@ -39,6 +39,8 @@ Run `nx g @nrwl/react:app my-app` to generate an application.
 
 When using Nx, you can create multiple applications and libraries in the same workspace.
 
+- New things lot of for me - Tailwind, Generate jwt token, access jwt token, signin, docker - mongodb  
+
 ## Generate a library
 
 Run `nx g @nrwl/react:lib my-lib` to generate a library.

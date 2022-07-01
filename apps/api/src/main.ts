@@ -4,8 +4,11 @@
  */
 
 import * as express from 'express';
+import { AuthRoutes } from './app/routes/Auth';
 
 const app = express();
+
+app.use(AuthRoutes);
 
 app.get('/api', (req, res) => {
   res.send({ message: 'Welcome to api!' });
