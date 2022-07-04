@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
 import { Home } from './components/Home';
 import { Login } from './components/Login';
 import { NewPost } from './components/NewPost';
+import { AuthService } from './services/Auth.service';
 
 export function App() {
   return (
@@ -15,12 +16,17 @@ export function App() {
             <li className="text-blue-800">
               <Link to="/">Home</Link>
             </li>
-            <li className="text-blue-800">
-              <Link to="/newpost">Create post</Link>
-            </li>
-            <li className="text-blue-800">
-              <Link to="/login">Login</Link>
-            </li>
+            {AuthService.isUserLoggedIn() ? (
+              <li className="text-blue-800">
+                <Link to="/newpost">Create post</Link>
+              </li>
+            ) : null}
+
+            {!AuthService.isUserLoggedIn() ? (
+              <li className="text-blue-800">
+                <Link to="/login">Login</Link>
+              </li>
+            ) : null}
           </ul>
         </nav>
       </header>

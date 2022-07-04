@@ -8,6 +8,6 @@ export const connectToDatabase = async () => {
     await client.connect();
 
     const db = client.db('microblogdb');
-    const dbCollection = db.collection('posts') as Collection;
+    dbCollection = db.collection('posts') as Collection;
 
 }
