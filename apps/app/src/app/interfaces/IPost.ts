@@ -6,5 +6,5 @@ export interface IPost {
   title: string;
   content: string;
   user: IUser;
-  comments: IComment;
+  comments: IComment[];
 }

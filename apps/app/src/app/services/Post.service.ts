@@ -19,7 +19,7 @@ export class PostService {
     title: string;
   }): Promise<any> {
     const headers = {
-      Authorization: `Bearer ${AuthService.getAccessToken}`,
+      Authorization: `Bearer ${AuthService.getAccessToken()}`,
     };
 
     const { data } = await axios.post(`${this.baseUrl}/post`, payload, {
@@ -32,7 +32,7 @@ export class PostService {
     postId: string
   ): Promise<any> {
     const headers = {
-      Authorization: `Bearer ${AuthService.getAccessToken}`,
+      Authorization: `Bearer ${AuthService.getAccessToken()}`,
     };
 
     const { data } = await axios.post(
